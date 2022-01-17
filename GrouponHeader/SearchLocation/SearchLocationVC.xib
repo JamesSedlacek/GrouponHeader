@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchLocationVC" customModule="GrouponHeader" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="wkv-FN-ghB" id="hIM-cl-WPU"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rxK-gb-RDe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPM-Z4-ZcE">
+                    <rect key="frame" x="20" y="44" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="0DJ-2q-BBa"/>
+                        <constraint firstAttribute="height" constant="30" id="LXu-3X-p7j"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="xmarkTapped:" destination="-1" eventType="touchUpInside" id="A4V-QM-KKx"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchLocation" translatesAutoresizingMaskIntoConstraints="NO" id="Sih-Dr-h9l">
+                    <rect key="frame" x="0.0" y="82" width="414" height="286"/>
+                </imageView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wkv-FN-ghB" customClass="CustomSegmentedControl" customModule="GrouponHeader" customModuleProvider="target">
+                    <rect key="frame" x="62" y="44" width="332" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="nLj-9b-rb0"/>
+                    </constraints>
+                    <segments>
+                        <segment title="City"/>
+                        <segment title="Country"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="wkv-FN-ghB" secondAttribute="trailing" id="FIM-up-Ns2"/>
+                <constraint firstItem="wPM-Z4-ZcE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="Fg1-Um-YGp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Sih-Dr-h9l" secondAttribute="trailing" id="LvT-fc-DGk"/>
+                <constraint firstItem="wkv-FN-ghB" firstAttribute="centerY" secondItem="wPM-Z4-ZcE" secondAttribute="centerY" id="UGX-tS-BQl"/>
+                <constraint firstItem="wPM-Z4-ZcE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Z3O-dW-dSs"/>
+                <constraint firstItem="Sih-Dr-h9l" firstAttribute="top" secondItem="wPM-Z4-ZcE" secondAttribute="bottom" constant="8" id="qwV-75-bvB"/>
+                <constraint firstItem="Sih-Dr-h9l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wK5-37-iRB"/>
+                <constraint firstItem="wkv-FN-ghB" firstAttribute="leading" secondItem="wPM-Z4-ZcE" secondAttribute="trailing" constant="12" id="wxT-KU-8Kf"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SearchLocation" width="361" height="286"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
